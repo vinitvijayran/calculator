@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="calculator.css">
+    <script src="https://unpkg.com/vue@next"></script>
+
+</head>
+<body>
+    
+    <div class="container" id="app">
+        <div class="card">
+            <!-- {{ completeNumber }} -->
+            <div class="input">
+                <input type="text" v-model="input">
+            </div>
+                <div class="first-line">
+                    <div class="button"><button @click="setInput(7)">7</button></div>
+                    <div class="button"><button @click="setInput(8)">8</button></div>
+                    <div class="button"><button @click="setInput(9)">9</button></div>
+                    <div class="button"><button @click="divide()">/</button></div>
+                </div>
+
+                <div class="first-line">
+                    <div class="button"><button @click="setInput(4)">4</button></div>
+                    <div class="button"><button @click="setInput(5)">5</button></div>
+                    <div class="button"><button @click="setInput(6)">6</button></div>
+                    <div class="button"><button @click="mul()">*</button></div>
+                </div>
+
+                <div class="first-line">
+                    <div class="button"><button @click="setInput(1)">1</button></div>
+                    <div class="button"><button @click="setInput(2)">2</button></div>
+                    <div class="button"><button @click="setInput(3)">3</button></div>
+                    <div class="button"><button @click="sub()">-</button></div>
+                </div>
+
+                <div class="first-line">
+                    <div class="button"><button @click="setInput(0)">0</button></div>
+                    <div class="button"><button @click="setInputBlank()">C</button></div>
+                    <div class="button"><button @click="add()">+</button></div>
+                    <div class="button"><button @click="equal()">=</button></div>
+                </div>
+            </div>
+        </div>
+
+    <script src="calculator.js"></script>
+
+</body>
+</html>
